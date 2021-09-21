@@ -8,11 +8,13 @@ A script to automate the process of sending cURL commands to the spm database
 
 **To use the script do the following:**
 - Create a csv file that contains data in this format: _license,location_ with no spaces surrounding the comma **ex: SIMON-PC,OFFICE**
-- The data should be formatted in 2 columns license on the left and location on the right
+- The data should be formatted in 2 columns. License on the left and location on the right
+- The cURL command cannot have any spaces in the data names. All _licenses_ should be a string with no spaces.
+- Any spaces in the _location_ string will be handled and replaced with **%20** in the scripts output. 
 - Name this file _"curl_data.csv"_ and save it in the same directory you intend to run the _"script.py"_
 - If you do not change the csv files name you must specify this on **line 10** of the script
 - You can change the column header vals on **line 5** but this is mostly arbitrary as I have included references to their list index on **lines 19,20**
-- I have included an **iterator**__ variable for testing purposes
+- I have included an **iterator** variable for testing purposes
 - If you would like to test the script on your data before fully running it, uncomment **line 31 and 32**. This will break the loop after one iteration
 - Make sure to recomment those lines to to get the full loop results
 - Change the value on **line 31** to allow more than one iteration to occur
